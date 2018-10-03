@@ -1,1 +1,37 @@
-Welcome to hell
+<h1>
+  Welcome to hell
+</h1>
+<h2>
+  Bookstore
+</h2>
+<p id="notice"><%= notice %></p>
+
+<h1>Buks</h1>
+<%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Author</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @buks.each do |buk| %>
+      <tr>
+        <td><%= buk.title %></td>
+        <td><%= buk.description %></td>
+        <td><%= buk.image_url %></td>
+        <td><%= buk.author %></td>
+        <td><%= link_to 'Show', buk %></td>
+        <td><%= link_to 'Edit', edit_buk_path(buk) %></td>
+        <td><%= link_to 'Destroy', buk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
