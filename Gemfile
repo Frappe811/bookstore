@@ -24,6 +24,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'grape', '~> 0.16.2'
 gem 'grape-entity', '~> 0.4.8'
+gem 'materialize-sass', '~> 1.0.0'
+gem 'material_icons'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
